@@ -1,0 +1,107 @@
+.navbar{
+    background-color: rgb(33,33,33);
+    margin: 0;
+    margin-left: -8px;
+    padding-left: 8px;
+    position: fixed;
+    overflow: hidden;
+    top: 0;
+    width: 100%;
+}
+.navbar-list 
+{
+    list-style-type: none;
+}
+main 
+{
+    margin-top: 60px;
+}
+#content 
+{
+    display: none;
+}
+form 
+{
+    width: 60%;
+    margin-bottom: 10px;
+}
+ul 
+{
+    margin-bottom: 0px;
+}
+#completedTaskList .content 
+{
+    color: grey;
+    text-decoration: line-through;
+}
+.navbar-list-item 
+{
+    display: inline;
+    font-size:25px;
+    color: white;
+}
+.taskTemplate
+{
+    margin: auto;
+    width: 60%;
+}
+.list-unstyled{
+    font-size: 30px;
+    color: rgb(78, 76, 76);
+
+}
+.container 
+{
+    display: block;
+    position: relative;
+    padding-left: 35px;
+    margin-bottom: 25px;
+    cursor: pointer;
+    font-size: 22px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+  }
+  
+  .container input 
+  {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+  }
+
+  .checkmark 
+  {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 25px;
+    width: 25px;
+    background-color: #eee;
+  }
+
+  .container:hover input ~ .checkmark 
+  {
+    background-color: #ccc;
+  }
+
+  .addTask
+  {
+    margin: auto;
+    width: 60%;
+    position: relative;
+    align-items: center;
+
+  }
+  .form-control
+  {
+    align-items: center;
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+  }
