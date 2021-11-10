@@ -12,21 +12,40 @@ Simple and secure todo list powered by smart contracts.
 
 ## Deployment 
 1. Install Metamask browser extension to securely connect to Ethereum blockchain. <br>Metamask allows for managing our personal account when connecting to the blockchain, as well as manage ETH funds needed to pay for transactions. 
+2. Install Ganache to set up our own blockchains that we will use to secure the todo list items. Its a Local development blockchain used to mimic the behavior of a public blockchain. Allows for deploying smart contracts, develop applications, and run tests.
+3. Install nodejs and npm.
+4. Configure npm to work without sudo:
+> 1. Create a directory for global packages
 
-<img width="794" alt="9-metamask" src="https://user-images.githubusercontent.com/59374267/123530068-5cd2c280-d6ab-11eb-9e0b-85c6411f3602.png"><br>
-2. Install Ganache to set up our own blockchains that we will use to secure the todo list items. <br>Its a Local development blockchain used to mimic the behavior of a public blockchain. Allows for deploying smart contracts, develop applications, and run tests.
+```sh
+mkdir "${HOME}/.npm-packages"
+```
 
-<img width="1195" alt="Screen Shot 2021-06-26 at 6 29 06 PM" src="https://user-images.githubusercontent.com/59374267/123530177-67418c00-d6ac-11eb-8b5e-3afd65fc48fc.png"><br>
-3. Install nodejs and npm. 
-4. Other deployment steps:
+> 2. Tell `npm` where to store globally installed packages
+
+```sh
+npm config set prefix "${HOME}/.npm-packages"
+```
+
+> 3. Ensure `npm` will find installed binaries and man pages
+
+Add the following to your `.bashrc`/`.zshrc`:
+
+```sh
+NPM_PACKAGES="${HOME}/.npm-packages"
+
+export PATH="$PATH:$NPM_PACKAGES/bin"
+
+# Preserve MANPATH if you already defined it somewhere in your config.
+# Otherwise, fall back to `manpath` so we can inherit from `/etc/manpath`.
+export MANP
+5. Other deployment steps:
 ```bash
 # Installing dependencies 
 $ npm install -g truffle@5.0.2
 $ npm install
-
 # Migrate the smart contract 
 truffle migrate --reset
-
 # Run the app
 $ npm run dev
 ```
