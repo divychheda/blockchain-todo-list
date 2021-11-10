@@ -34,74 +34,96 @@ ul
     color: grey;
     text-decoration: line-through;
 }
+
 .navbar-list-item 
 {
-    display: inline;
-    font-size:25px;
-    color: white;
+  display: inline;
+  font-size:25px;
+  color: #e0fbfc;
+}
+.navbar-link:link,.navbar-link:visited
+{
+  padding-right: 20px;
+  font-size: 15px;
+  text-decoration: none;
+  color: #e0fbfc;
 }
 .taskTemplate
 {
-    margin: auto;
-    width: 60%;
+  display: flex;
+  margin-left: -8px;
+  width: 100%;
+  overflow: hidden;
+  overflow-wrap: anywhere;
+  padding: 20px;
+  padding-left: 40px;
 }
-.list-unstyled{
-    font-size: 30px;
-    color: rgb(78, 76, 76);
-
+.list-unstyled
+{
+  font-size:medium;
+  color: #293241;
+  padding: 0;
+}
+.taskTemplate:nth-child(even)
+{
+background-color:#98c1d9b9;
 }
 .container 
 {
-    display: block;
-    position: relative;
-    padding-left: 35px;
-    margin-bottom: 25px;
-    cursor: pointer;
-    font-size: 22px;
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
-  }
-  
-  .container input 
-  {
-    position: absolute;
-    opacity: 0;
-    cursor: pointer;
-    height: 0;
-    width: 0;
-  }
+  display: block;
+  position: relative;
+  padding-left: 35px;
+  margin-bottom: 25px;
+  cursor: pointer;
+  font-size: 22px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
 
-  .checkmark 
-  {
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: 25px;
-    width: 25px;
-    background-color: #eee;
-  }
+.container input 
+{
+  position: absolute;
+  padding: auto;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
 
-  .container:hover input ~ .checkmark 
-  {
-    background-color: #ccc;
-  }
+.checkmark 
+{
+  position: absolute;
+  padding: auto;
+  top: 0;
+  left: 0;
+  height: 25px;
+  width: 25px;
+  background-color: #293241a1;
+}
 
-  .addTask
-  {
-    margin: auto;
-    width: 60%;
-    position: relative;
-    align-items: center;
-
-  }
-  .form-control
-  {
-    align-items: center;
-    width: 100%;
-    padding: 12px 20px;
-    margin: 8px 0;
-    display: inline-block;
-    border: 1px solid #ccc;
-  }
+.container:hover input ~ .checkmark 
+{
+  border-color: #293241;
+}
+body
+{
+  background-color:#98c1d941;
+}
+.addTask
+{
+  margin: auto;
+  width: 75%;
+  position: relative;
+  align-items: center;
+}
+.form-control
+{
+  align-items: center;
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+}
