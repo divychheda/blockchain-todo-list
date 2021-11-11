@@ -1,4 +1,4 @@
-# Ethereum Blockchain Application - Todo List
+# Blockchain Todo List
 
 Simple and secure todo list powered by smart contracts.
 
